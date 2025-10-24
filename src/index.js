@@ -1,17 +1,48 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function App() {
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    return (
+        <div>
+            <h1>Pizzers</h1>
+            <Pizzafocaccia />
+            <HeaderFocaccia />
+            <Pizzafunghi />
+            <HeaderFunghi/>
+        </div>
+    )
+}
+
+function HeaderFocaccia() {
+    return (
+        <div>
+            <h2>Focaccia</h2>
+            <h4>Focaccia is a flat, oven-baked Italian bread made from flour, water, yeast, and salt, and typically flavored with olive oil</h4>
+        </div>
+    )
+} 
+
+function HeaderFunghi() {
+    return (
+        <div>
+            <h2>Funghi</h2>
+            <h4>Funghi pizza is Italian for "mushroom pizza," typically made with a tomato sauce base, mozzarella cheese, and mushrooms as the main topping. </h4>
+        </div>
+    )
+} 
+
+function Pizzafocaccia() {
+    return (
+      <img src="/pizzas/focaccia.jpg" alt="Focaccia" />
+    )
+}
+
+function Pizzafunghi() {
+    return (
+        <img src="/pizzas/funghi.jpg" alt="Funghi" />
+    )
+}
+
+const root = ReactDom.createRoot(document.getElementById("root"));
+root.render(<App />); 
